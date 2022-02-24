@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Auto Limpio</title>
+        <meta name="description" content="Empresa dedicada a la limpieza de automoviles"/>
+        <meta name="keywords" content="automovil, limpio, limpieza, vehiculo"/>
+        <meta name="author" content="Juan Pablo"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- implementa bootstrap -->
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.js"></script>
+        
+    </head>
+
+    <body>
+        <!--BANNER-->
+        <header>
+            <div class="container-fluid">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-light list-group-item-warning">
+                        <div class="container-fluid">
+                        <a class="navbar-brand mb-0 h1" href="#">Lavado de autos: AUTO LIMPIO</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Quienes somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+                            </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </nav>
+                </div>
+        </div>
+        </header>
+        <!--FIN DEL BANNER-->
+
+        <section class="container" >
+            <div class="row -5">
+             <!--FORMULARIO DE REGISTRO--> 
+            <div class="divform"></div> 
+            <div class="col-sm12 col-md-12 col-lg-12">
+                <form name="formRegistro" method="get" class="formucolor">
+                    <h3 class="titulos">Formulario Cliente: </h3>
+                    <div class="form-group"  >
+                        <label class="subtitulos" >Nombres:</label>
+                        <input type="text" class="form-control" name="txtNombre" id="txtNombre" placeholder="Andres" title="Escriba su primer nombre" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" maxlength="30" required>
+                        <div id="errorNombre" class="text fs-6 text-danger"></div>
+                        <input type="text" class="form-control" name="txtNombre2" id="txtNombre2" placeholder="Mauricio" title="Escriba su segundo nombre" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" maxlength="30" required>
+                        <div id="errorNombre2" class="text fs-6 text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="subtitulos" >Apellidos: </label>
+                        <input type="text" class="form-control" name="txtApellidoPaterno" id="txtApellidoPaterno" placeholder="Quezada" title="Escriba su apellido paterno" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" maxlength="30" required>
+                        <div id="errorApelidoPaterno" class="text fs-6 text-danger"></div>
+                        <input type="text" class="form-control" name="txtApellidoMaterno" id="txtApellidoMaterno" placeholder="Perez" title="Escriba su apellido materno" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" maxlength="30" required>
+                        <div id="errorApellidoMaterno" class="text fs-6 text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="subtitulos" >Dirección:</label>
+                        <input type="textnumber" class="form-control" name="txtDireccion" id="txtDireccion" title="Escriba su direccion" placeholder="Calle aleatoria 123" onkeypress="return ((event.charCode >= 48 && event.charCode <= 57) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122)(event.charCode ==32))" maxlength="80" required>
+                        <div id="errorDireccion" class="text fs-6 text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="subtitulos" >Rut:</label>
+                        <input type="textnumber" class="form-control" name="txtRutID" id="txtRutID" title="Escriba su RUT" placeholder="12345678" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required maxlength="8"required >
+                        <div id="errorRutID" class="textnumber fs-6 text-danger"></div>
+                        <label class="subtitulos" >Digito verificador: </label>
+                        <input type="textnumber" class="form-control" name="txtNumberID" id="txtNumberID" title="Digito verificador" placeholder="1 o K" onkeypress="return ((event.charCode >= 48 && event.charCode <= 57) || (event.charCode == 75)||(event.charCode == 107))" required maxlength="1" required>
+                        <div id="errorNumberID" class="textnumber fs-6 text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="subtitulos" >Seleccione su Comuna:</label>
+                        <select class="form-select" name="comuna">
+                            <option selected>Seleccione su Comuna</option>
+                            <option value="TCO">Temuco</option>
+                            <option value="PLC">Padre Las Casas</option>
+                            <option value="LTO">Lautaro</option>
+                            <option value="CNO">Cunco</option>
+                            <option value="NIL">Nva Imperial</option>
+                        </select>
+                    </div>
+                
+                
+                <h3 class="titulos" >Datos del Automóvil: </h3>
+                    <div class="form-group"> 
+                        <label class="subtitulos" >Tipo de Vehículo:</label>
+                        <select class="form-select" name="vehiculo">
+                            <option selected>Seleccione una opción</option>
+                            <option value="FN">Furgón</option>
+                            <option value="AL">Automóvil</option>
+                            <option value="CN">Camión</option>
+                            <option value="CA">Camioneta</option>
+                            <option value="MO">Moto</option>
+                        </select>
+                    </div>
+                    <div class="form-group">         
+                        <label class="subtitulos" >Marca:</label>
+                        <input type="text" class="form-control" name="txtMarca" id="txtMarca" title="Escriba la marca" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" maxlength="20" required >
+                        <div id="errorMarca" class="text fs-6 text-danger"></div>
+                    </div>
+                    <div class="form-group">         
+                        <label class="subtitulos" >Modelo:</label>
+                        <input type="text" class="form-control" name="txtModelo" id="txtModelo" title="Escriba el modelo" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" maxlength="20" required >
+                        <div id="errorModelo" class="text fs-6 text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="subtitulos" >Año:</label>
+                        <input type="textnumber" class="form-control" name="txtAnio" id="txtAnio" title="Escriba el año del vehiculo" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxlength="4" required>
+                        <div id="errorAnio" class="textnumber fs-6 text-danger"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="subtitulos" >Revisión técnica al día: si/no</label><!--radio-->
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioSi">Si</label>
+                        </div>                                    
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioNo">No</label>
+                        </div>
+                    </div>
+                     <h3 class="titulos">Tipo de Servicio: </h3>
+                     <div class="form-group">
+                        <label class="subtitulos" >Escoja el servicio que necesita:</label>
+                        <select class="form-select" name="lavado">
+                            <option selected>Seleccione una opción</option>
+                            <option value="LE">Lavado Exterior $7.500</option>
+                            <option value="LM">Lavado de Motor $7.500</option>
+                            <option value="LC">Lavado completo</option>
+                        </select>
+                     </div>
+                     <div>
+                        <button type="submit" class="btn btn-primary" name="buttonSubmit" onclick="onvalidateInput()">Enviar</button> 
+                     </div>
+                </form>
+                </div>
+                </div>
+            </div> 
+        </section>
+        <!--FIN DEL FORMULARIO-->    
+        
+        <!-- FOOTER-->
+            <section>
+                <footer class="footer">
+                    <div class="container-fluid">
+                        
+                          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                          </ul>
+                          <p class="text-center text-muted"><a class="nav-link px-2 text-muted">© 2022 Auto Limpio</a></p>
+                        
+                      </div>
+                </footer>
+        </section>
+        <!--FIN DEL FOOTER-->
+        <script>
+            ///////////////////////////////////////////////////////////////////////
+            /* asigna los elementos html a constantes por id y nombre */
+                const Nombre = document.getElementById("txtNombre");
+                const Nombre2 = document.getElementById("txtNombre2");
+                const ApellidoPaterno = document.getElementById("txtApellidoPaterno");
+                const ApellidoMaterno = document.getElementById("txtApellidoMaterno");
+                const Direccion = document.getElementById("txtDireccion");
+                const RutID = document.getElementById("txtRutID");
+                const NumberID = document.getElementById("txtNumberID");
+                const Marca = document.getElementById("txtMarca");
+                const Modelo = document.getElementsByName("txtModelo");
+                const Anio = document.getElementById("txtAnio");
+        
+            /* asigna constantes a los divs de errores */
+                const errorNombre = document.getElementById("errorNombre");
+                const errorNombre2 = document.getElementById("errorNombre2");
+                const errorApellidoPaterno = document.getElementById("errorApelidoPaterno");
+                const errorApellidoMaterno = document.getElementById("errorApellidoMaterno");
+                const errorDireccion    = document.getElementById("errorDireccion");
+                const errorRutID = document.getElementById("errorRutID");
+                const errorNumberID = document.getElementById("errorNumberID");
+                const errorMarca = document.getElementById("errorMarca");
+                const errorModelo = document.getElementById("errorModelo");
+                const errorAnio = document.getElementById("errorAnio");
+
+            /* chequea por errores */
+            function onvalidateInput() {
+            if (Nombre.value == null || Nombre.value == "") {
+                errorNombre.innerText = "Debe ingresar su primer nombre";
+                Nombre.className = "form-control border border-danger";
+            }
+
+            if (Nombre2.value == null || Nombre2.value == ""){
+                errorNombre2.innerText = "Debe ingresar su segundo nombre";
+                Nombre2.className = "form-control border border-danger";
+            }
+            if (ApellidoPaterno.value == null || ApellidoPaterno.value == "") {
+                errorApellidoPaterno.innerText = "Debe ingresar apellido paterno";
+                ApellidoPaterno.className = "form-control border border-danger";
+            }
+
+            if (ApellidoMaterno.value == null || ApellidoMaterno.value == "") {
+                errorApellidoMaterno.innerText = "Debe ingresar apellido materno";
+                ApellidoMaterno.className = "form-control border border-danger";
+            }
+            if (Direccion.value == null || Direccion.value == "") {
+                errorDireccion.innerText = "Debe ingresar direccion";
+                Direccion.className = "form-control border border-danger";
+            }
+
+            if (RutID.value == null || RutID.value == "") {
+                errorRutID.innerText = "Debe ingresar su RUT";
+                RutID.className = "form-control border border-danger";
+            }
+            if (NumberID.value == null || NumberID.value == "") {
+                errorNumberID.innerText = "Debe ingresar digito verificador";
+                NumberID.className = "form-control border border-danger";
+            }
+
+            if (Marca.value == null || Marca.value == "" ) {
+                errorMarca.innerText = "Debe ingresar la marca de su automovil";
+                Marca.className = "form-control border border-danger";
+            }
+            if (Modelo.value == null || Modelo.value == "") {
+                errorModelo.innerText = "Debe ingresar el modelo";
+                Modelo.className = "form-control border border-danger";
+            }
+
+            if (Anio.value == null || contraseña.value == "") {
+                errorAnio.innerText = "Debe ingresar el año";
+                Anio.className = "form-control border border-danger";
+            }
+        }
+        /*FUNCION LIMPIAR*/
+        function onLimpiarInput(input) {
+            if (input == "txtNombre") {
+                errorNombre.innerText = "";
+                Nombre.className = "form-control";
+            }
+            if (input == 'txtNombre2') {
+                errorNombre2.innerText = "";
+                Nombre2.className = "form-control";
+            }
+            if (input == 'txtApellidoPaterno') {
+                errorApellidoPaterno.innerText = "";
+                ApellidoPaterno.className = "form-control";
+            }
+            if (input == 'txtApellidoMaterno') {
+                errorApellidoMaterno.innerText = "";
+                ApellidoMaterno.className = "form-control";
+            }
+            if (input == 'txtDireccion') {
+                errorDireccion.innerText = "";
+                Direccion.className = "form-control";
+            }
+            if (input == 'txtRutID') {
+                errorRutID.innerText = "";
+                RutID.className = "form-control";
+            }
+            if (input == 'txtNumberID') {
+                errorNumberID.innerText = "";
+                NumberID.className = "form-control";
+            }
+            if (input == 'txtMarca') {
+                errorMarca.innerText = "";
+                Marca.className = "form-control";
+            }
+            if (input == 'txtModelo') {
+                errorModelo.innerText = "";
+                Modelo.className = "form-control";
+            }
+            if (input == 'txtAnio') {
+                errorAnio.innerText = "";
+                Anio.className = "form-control";
+            }
+        }
+        </script>
+               
+    </body>
+</html>

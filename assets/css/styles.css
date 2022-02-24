@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+body {
+    background-image: url('../img/lavadoauto2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* La imagen se adaptará al tamaño total del navegador */
+    background-attachment: fixed; /* posicionar imagen en un solo lugar */
+    background-position: center;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+/*FORMULARIO*/
+
+.formucolor{
+    max-width: 25em;
+    padding: 1.3em;
+    margin: 0 auto;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 0.5em;
+    box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
+}
+
+
+.titulos{
+    color: black;
+    text-align: center;
+}
+
+.subtitulos{
+    color: black;
+
+}
+
+footer {
+    color: black;
+    background-color: rgba(37, 36, 36, 0.85);
+    box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
+}
